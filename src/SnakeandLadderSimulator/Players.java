@@ -24,13 +24,17 @@ public class Players {
 			 break;
 		 case LADDER:
 			 System.out.println("Player Moves Ahead by "+dieRoll);
-			 playerPosition+=dieRoll;
+			 if(playerPosition + dieRoll <=WINNING_POSITION) {
+				 playerPosition += dieRoll; 
+			 }else {
+				 System.out.println("Players cannot exceed position 100 "+playerPosition);
+			 }
 			 break;
 		 case SNAKE:
 			 System.out.println("Player Fall Down by "+dieRoll);
 			 playerPosition-=dieRoll;
-			 if(playerPosition<0)
-				 playerPosition=0;
+			 if(playerPosition < 0)
+				 playerPosition = 0;
 			 break;
 		 }
 		 System.out.println("Player Current Position "+playerPosition);
