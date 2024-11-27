@@ -10,6 +10,7 @@ public class Players {
 	private static final int WINNING_POSITION = 100;
 	public static void main(String[] args) {
 		System.out.println("Welcome to Snake And Ladder Game\n");
+		int diceCount=0;
 		int playerPosition = START_POSITION;
 		System.out.println("Player starts at position:  " + playerPosition);
 		 Random random=new Random();
@@ -17,6 +18,8 @@ public class Players {
 		 int dieRoll=random.nextInt(6)+1;
 		 
 		 System.out.println("Player rolls the die and gets: "+dieRoll);
+		 diceCount++;
+		 System.out.println("Player rolls the die and gets: " + dieRoll + " Dice count "+diceCount);
 		 int option=random.nextInt(3);
 		 switch(option) {
 		 case NO_PLAY:
@@ -41,6 +44,7 @@ public class Players {
 		 }
 	
 		 System.out.println("\nCongratulations! Player reached the winning position:" + WINNING_POSITION);
+		   System.out.println("Total Dice Count To Winning :"+diceCount);
 	}
 	
 }
