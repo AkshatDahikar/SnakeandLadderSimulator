@@ -20,7 +20,7 @@ public class Players {
 	            playerPosition += dieRoll;
 	            if (playerPosition > WINNING_POSITION) {
 	            	 playerPosition -= dieRoll;
-	            	 System.out.println("You cannot move beyond position " + WINNING_POSITION);
+	            	 System.out.println("You cannot move beyond position  " + WINNING_POSITION);
 	            }else {
 	            	 System.out.println("Player is at position " + playerPosition);
 	            	 playerPosition = checkSnakeAndLadder(playerPosition);
